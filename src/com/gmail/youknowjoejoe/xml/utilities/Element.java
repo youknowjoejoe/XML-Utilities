@@ -62,6 +62,10 @@ public class Element {
 		return attributes;
 	}
 	
+	public String get(String key){
+		return attributes.get(key);
+	}
+	
 	public String getText(){
 		return text;
 	}
