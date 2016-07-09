@@ -24,7 +24,9 @@ public class Document {
 		InputStream input = Document.class.getClass().getResourceAsStream(path);
 		Scanner s = new Scanner(input);
 		s.useDelimiter("\\A");
-		return s.hasNext() ? s.next() : "";
+		String t = s.hasNext() ? s.next() : "";
+		s.close();
+		return t;
 	}
 	
 	public Element getRoot(){
