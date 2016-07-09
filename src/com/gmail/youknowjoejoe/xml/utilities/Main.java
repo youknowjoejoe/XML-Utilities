@@ -45,7 +45,9 @@ public class Main {
 		}
 		System.out.println(new Document("<  dog 	 sandwhich  =  \"  t  ruu  uuu  \"  >  	 hellloooooo there  </dog>").getRoot().toString());*/
 		
-		System.out.println(new Document(Document.getDocumentFromFile("/Sample.xml")).getRoot().toString());
+		//System.out.println(new Document(Document.getDocumentFromFile("/Sample.xml")).getRoot().toString());
+		
+		System.out.println(new Document(parent.toString()).getElementsBy("FavoriteFood", "Fried Chicken").get(0).toString());
 	}
 
 }

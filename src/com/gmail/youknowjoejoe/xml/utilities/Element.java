@@ -69,6 +69,17 @@ public class Element {
 	public String getText(){
 		return text;
 	}
+	
+	public void getElementsBy(String key, String value, List<Element> elements){
+		String attribValue = this.attributes.get(key);
+		if(attribValue != null){
+			if(attribValue.equals(value)){
+				elements.add(this);
+			}
+		}
+		
+		this.children.forEach((Element e) -> e.getElementsBy(key, value, elements));
+	}
 
 	@Override
 	public String toString() {

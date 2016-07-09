@@ -2,6 +2,7 @@ package com.gmail.youknowjoejoe.xml.utilities;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,6 +25,15 @@ public class Document {
 	
 	public Element getRoot(){
 		return root;
+	}
+	
+	public List<Element> getElementsBy(String key,String value){
+		List<Element> es = new LinkedList<Element>();
+		
+		root.getElementsBy(key, value, es);
+		
+		return es;
+		
 	}
 	
 	public void parse(){
