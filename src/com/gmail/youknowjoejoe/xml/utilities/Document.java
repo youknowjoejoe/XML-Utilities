@@ -16,6 +16,10 @@ public class Document {
 		this.parse();
 	}
 	
+	public Document(Element root){
+		this.root = root;
+	}
+	
 	public static String getDocumentFromFile(String path){
 		InputStream input = Document.class.getClass().getResourceAsStream(path);
 		Scanner s = new Scanner(input);
@@ -36,7 +40,7 @@ public class Document {
 		
 	}
 	
-	public void parse(){
+	private void parse(){
 		List<Element> elements = new ArrayList<Element>();
 		
 		String txt = this.document;
