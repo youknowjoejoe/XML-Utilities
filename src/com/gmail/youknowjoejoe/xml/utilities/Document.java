@@ -20,7 +20,7 @@ public class Document {
 		this.root = root;
 	}
 	
-	public static String getDocumentFromFile(String path){
+	public static String getStringFromInternalFile(String path){
 		InputStream input = Document.class.getClass().getResourceAsStream(path);
 		Scanner s = new Scanner(input);
 		s.useDelimiter("\\A");

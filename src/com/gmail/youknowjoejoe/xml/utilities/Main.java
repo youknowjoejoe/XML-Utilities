@@ -21,33 +21,7 @@ public class Main {
 		Element child3 = new Element("DOG",parent);
 		child3.setText("Why is there text inside the dog tag?");
 		
-		/*System.out.println(parent.getName() + "'s children: ");
-		parent.getChildren().forEach((Element e) -> System.out.println(e.getName()));
-		System.out.println(parent.getName() + "'s attributes: ");
-		parent.getAttributes().forEach((key,value) -> System.out.println(key + ": " + value));
 		
-		System.out.println(child1.getName() + "'s attributes: ");
-		child1.getAttributes().forEach((key,value) -> System.out.println(key + ": " + value));
-		
-		System.out.println(child2.getName() + "'s attributes: ");
-		child2.getAttributes().forEach((key,value) -> System.out.println(key + ": " + value));*/
-		
-		System.out.println(parent.toString());
-		
-		
-		//System.out.println(StringUtils.replacePatternOutsideQuotes("<  dog  sandwhich  =  \"  t  ruu  uuu  \"  >"));
-		
-		/*System.out.println(new Document(parent.toString()).getRoot().toString());
-		for(Element e: new Document(parent.toString()).getRoot().getChildren()){
-			if(e.getName().equals("DOG")){
-				System.out.println(e.getText());
-			}
-		}
-		System.out.println(new Document("<  dog 	 sandwhich  =  \"  t  ruu  uuu  \"  >  	 hellloooooo there  </dog>").getRoot().toString());*/
-		
-		//System.out.println(new Document(Document.getDocumentFromFile("/Sample.xml")).getRoot().toString());
-		
-		System.out.println(new Document(parent.toString()).getElementsBy("FavoriteFood", "Fried Chicken").get(0).toString());
 	}
 
 }
