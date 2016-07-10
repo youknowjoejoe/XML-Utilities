@@ -66,6 +66,16 @@ public class Element {
 		return attributes.get(key);
 	}
 	
+	public List<Element> getChildWithName(String name){
+		List<Element> es = new LinkedList<Element>();
+		for(Element e: this.children){
+			if(e.getName() == name){
+				es.add(e);
+			}
+		}
+		return es;
+	}
+	
 	public String getText(){
 		return text;
 	}
